@@ -1,5 +1,6 @@
 import gspread
 from google.oauth2.service_account import Credentials
+from pprint import pprint
 
 SCOPE = [
     "https://www.googleapis.com/auth/spreadsheets",
@@ -76,8 +77,12 @@ def calculate_surplus_data(sales_row):
     - Negative surplus indicates out of stock and to be studied actions on that month
     as well to assist next stock calculation
     """
+    print("Calculating surplus data...\n")
+    stock = SHEET.worksheet("stock").get_all_values()
+    stock_row = stock[-1]
+
     surplus_data = []
-    for stocks, sales in zip(stock_row, sales_row):
+    for stock, sales in zip(stock_row, sales_row):
         surplus = int(stock) - sales
         surplus_data.append(surplus)
 
@@ -93,7 +98,7 @@ def main():
     update_worksheet(sales_data, "sales")
     new_surplus_data = calculate_surplus_data(sales_data)
     update_worksheet(new_surplus_data, "surplus")
-
+    
 
 print("Welcome to Love Sandwiches Data Automation.\n")
 main()    
