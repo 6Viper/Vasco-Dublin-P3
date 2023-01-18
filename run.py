@@ -55,5 +55,44 @@ def validate_data(values):
     return True
 
 
-data = get_sales_data()
+def update_worksheet(data, worksheet):
+    """
+    Receives a list of integers to be inserted into a worksheet
+    Update the relevant worksheet with the data provided
+    """
+
+    print(f"Updating {worksheet} worksheet...\n")
+    worksheet_to_update = SHEET.worksheet(worksheet)
+    worksheet_to_update.append_row(data)
+    print(f"{worksheet} worksheet updated successfully\n")
+
+
+def calculate_surplus_data(sales_row):
+    """
+    Compare sales with stock and calculate the surplus for each item type.
+
+    The surplus is defined as the sales figure subtracted from the stock:
+    - Positive surplus indicates carryover stock and possible excess on warehouse
+    - Negative surplus indicates out of stock and to be studied actions on that month
+    as well to assist next stock calculation
+    """
+    surplus_data = []
+    for stocks, sales in zip(stock_row, sales_row):
+        surplus = int(stock) - sales
+        surplus_data.append(surplus)
+
+    print(surplus_data)
+
+def main():
+    """
+    Run all program functions
+    """
+    data = get_sales_data()
+    sales_data = [int(num) for num in data]
+    update_worksheet(sales_data, "sales")
+
+
+
+print("Welcome to Love Sandwiches Data Automation.\n")
+main()    
 
