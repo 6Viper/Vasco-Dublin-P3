@@ -12,8 +12,19 @@ SCOPED_CREDS = CREDS.with_scopes(SCOPE)
 GSPREAD_CLIENT = gspread.authorize(SCOPED_CREDS)
 SHEET = GSPREAD_CLIENT.open('Vasco-Dublin')
 
-sales = SHEET.worksheet('Sales')
 
-data = sales.get_all_values()
+def get_sales_data():
+    """
+    Get month sales figures input from the user. 
 
-print(data)
+    """
+    print("Please enter total sold units from last month following product order (Polo S/Polo M/Polo L/T-Shirt S/T-shirt M/T-shirt L/Jacket S/Jacket M/Jacket L).")
+    print("Data should be nine numbers, separated by commas.")
+    print("Examples: 10,5,40,50,100,88,2,15,120\n")
+
+    data_str = input("Enter data here:\n")
+    print(f"The data provided is {data_str}")
+
+
+get_sales_data()
+
