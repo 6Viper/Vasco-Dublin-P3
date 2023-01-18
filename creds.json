@@ -1,0 +1,12 @@
+{
+  "type": "service_account",
+  "project_id": "vascodublin",
+  "private_key_id": "9ba7f507e405792f409fe4edbfcb6a32861f915f",
+  "private_key": "-----BEGIN PRIVATE KEY-----\nMIIEvQIBADANBgkqhkiG9w0BAQEFAASCBKcwggSjAgEAAoIBAQCxCtX4G0uJ/1DE\nb3E6iRG4yx+buVyAas0DeeO0KwS95V+Hc2Mttd9Gisp3AhqN1yLgKajgrz56tVWh\nOmoi+g5NDFFjdozv8iMHRXhFvwlqZ+T1YsXGWa/pHEpF3wSbYQIkU09J1ms4rRLu\nbDOHr1bn32uDdX2vMbmAKzmaoGiRT5Y8bjDDoly/0OO0x/qr/QCME2h8o3dDp0CV\npb3XHcqm6WHFB6OOpnBIGkXrQa8NAZhx1l5ChtWCpwmunSvyofaHl7r85x48qd5f\n9spW7l8ZzvZR7hpsaZO1v060L8vtnpo5jnhelBpKBeKF5+UHALh7Sztul0Pqk7nF\n8soLl1sJAgMBAAECggEAD/abaPHjG4gJKxEmW0IRNkGgcbzitZSLtEjJCo2Hcazt\nMmwp0O0Rew2YKGdo6AmyNBalis7aWhugIze+arVz1SgrbYW6uwbw+B6gM9/AFFdW\nWnbjwNkE5sa9frPXeUAjvo1BfLWn+NYIOzXH5q/dbO5lBhcxtDqOUJt1J/dXPmTR\nQ9wf0lRs3n5nZc/AOt+gjgM2jLdQocDRdTp5KYve0bAFZgTREXNok1Gfr2ROCq/K\nkGQNlVPGM0WYmYEQFDCbOG66Jcfw5wPYgcHrvv8UGZikWJpc36OoyYpXXO8EmsN0\ntJrkYs5unGFpPD5YOaLeUO2cN5F8mi6/U46QIwzKoQKBgQDxYXla6b9Rs+LZOMXX\nhOhDoE5/qwlOsHExUFDJi3vw3VR4DhP/Es2pHPuoueXRcahG51rJKJz7jl5BbFk+\nUYj8cnMUd761MzQEpx0yaFwhnNQsNCuFMSY4Tdue9qlB2oQEdTRpbyTxaDYnHjDj\nRyieYloiRXXD7HB1uoKqWlYaMQKBgQC7w9EC18kxaWKSHbCrLZXiOdWhBs6unC5U\nEGJ28VDCCJ87DMCVeNN7ExE6Nl+xEoCRcZbYByaC/oyx5oCj6ryeUznJwFey9PVV\nx904tsT3Sc5VOR6h1oyQPTNve2ZZehaXBUxFgyXtdp8LRfElbQIzuyy5f4cPkKXs\nnmQEi9xAWQKBgEOWxrNlRnQrSbcHhaZ+icb96V0oWFfXYiqr0aNN0mu0ngVr8791\n1W6oNfOd8jM+fx8zgyFWpPZvfAcXvrmLfS8rIPw3N4hniQZQgQVvYXTsBCFIjnMi\nOxCDBJ8zdFuDQ3o4E2/+djq+soMrmgbaEw6efZyhFIPC/g6JJjNrTjbRAoGAC6+5\nX5Lsq82iW/PLHixdKtJssHQLAyUnYQYQCtUkMJ92waceiW8Wwo9CQDxIIm5DYEoQ\nmGuBgx+yxBPTp+AhUz1c2GjHTJUge/FPnIsLoVSPqhA/DtWatBOLEwI8MY9+vnGO\n+Lib8La0WXBF/Q1W2L9qnjUIw/g9y4dkNEA8OikCgYEAgwNFXe+N0sS+t/c2vryh\netsNhe1FRsOgRVRVGvIt7JkVDeCNpfxWeKGbY1gZqzli+I9evjhqlg28LJwohifQ\n0VvB9Uhh6rTybe2O2pgQIwBOgn0MkgTMNcLZs0qpzKy/7c0VOw0VzLrFe1ooGyyq\nMYEIUciBOPgH8FJ+4YmK8fo=\n-----END PRIVATE KEY-----\n",
+  "client_email": "leo-404@vascodublin.iam.gserviceaccount.com",
+  "client_id": "117150488832361093506",
+  "auth_uri": "https://accounts.google.com/o/oauth2/auth",
+  "token_uri": "https://oauth2.googleapis.com/token",
+  "auth_provider_x509_cert_url": "https://www.googleapis.com/oauth2/v1/certs",
+  "client_x509_cert_url": "https://www.googleapis.com/robot/v1/metadata/x509/leo-404%40vascodublin.iam.gserviceaccount.com"
+}
