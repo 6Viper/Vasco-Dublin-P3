@@ -75,7 +75,6 @@ I have manually tested this project by doing the following:
   - PEP8 CI
     - No critical errors were returned from pep8ci.herokuapp.com
     - Several errors for blankspace and line too long fixed
-    - 2 errors (E501) for lines 25 and 26 decided to be kept as under 94 characters and provides a better visual effect on terminal without compromising any aspect of the project. 
 
 # Deployment
 This project was deployed using GitHub and Heroku.
