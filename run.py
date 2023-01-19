@@ -73,9 +73,10 @@ def calculate_surplus_data(sales_row):
     Compare sales with stock and calculate the surplus for each item type.
 
     The surplus is defined as the sales figure subtracted from the stock:
-    - Positive surplus indicates carryover stock and possible excess on warehouse
-    - Negative surplus indicates out of stock and to be studied actions on that month
-    as well to assist next stock calculation
+    - Positive surplus indicates carryover stock and possible excess on warehouse.
+    - Negative surplus indicates amount of items that required an extra order from 
+    manufacturer with extra cost, and requires data to be analysed for future, as well
+    as to assist next stock calculation.
     """
     print("Calculating surplus data...\n")
     stock = SHEET.worksheet("stock").get_all_values()
@@ -89,6 +90,20 @@ def calculate_surplus_data(sales_row):
     return surplus_data
 
 
+def get_bimestrial_entries_sales():
+    """
+    " Collects data from sales worksheet, collecting only bimestrial period last year, 
+    returning data as a list of lists to be used on stock data calculation".
+    """
+    sales = SHEET.worksheet("sales")
+    
+    columns = []
+    for ind in range(1, 10):
+        column = sales.col_values(ind)
+        columns.append(column[-12:-10])
+
+    return columns    
+
 def main():
     """
     Run all program functions
@@ -100,6 +115,6 @@ def main():
     update_worksheet(new_surplus_data, "surplus")
     
 
-print("Welcome to Love Sandwiches Data Automation.\n")
-main()    
+print("Welcome to Vasco Dublin Data Automation.\n")
+main()
 
