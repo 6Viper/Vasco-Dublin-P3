@@ -133,7 +133,9 @@ def main():
     update_worksheet(new_surplus_data, "surplus")
     sales_columns = get_bimestrial_entries_sales()
     stock_data = calculate_stock_data(sales_columns)
-    print(stock_data)
+    update_worksheet(stock_data, "stock")
+
+    return stock_data
 
 print("Welcome to Vasco Dublin Data Automation.\n")
 main()
