@@ -1,7 +1,6 @@
 import gspread
 from google.oauth2.service_account import Credentials
 
-
 SCOPE = [
     "https://www.googleapis.com/auth/spreadsheets",
     "https://www.googleapis.com/auth/drive.file",
@@ -16,25 +15,28 @@ SHEET = GSPREAD_CLIENT.open('Vasco-Dublin')
 
 def get_sales_data():
     """
-    Get month sales figures input from the user. Run a while loop to collect a valid
-    string of data from the user via the terminal, which must be a string of 9 numbers
-    separated by commas. The loop will repeatedly request data until proofs valid. 
+    Get month sales figures input from the user. Run a while loop to collect
+    a valid string of data from the user via the terminal, which must be
+    a string of 9 numbers separated by commas. The loop will repeatedly request
+    data until proofs valid.
 
     """
     while True:
-        print("Please enter total sold units from last month following product order (Polo S/Polo M/Polo L/T-Shirt S/T-shirt M/T-shirt L/Jacket S/Jacket M/Jacket L).")
+        print("Please enter total sold units from last month following product\
+        order (Polo S/Polo M/Polo L/T-Shirt S/T-shirt M/T-shirt L/Jacket S/Jacket\
+        M/Jacket L).")
         print("Data should be nine numbers, separated by commas.")
         print("Examples: 10,5,40,50,100,88,2,15,120\n")
 
         data_str = input("Enter data here:\n")
-        
+
         sales_data = data_str.split(",")
 
         if validate_data(sales_data):
             print("Data is valid!")
             break
 
-    return sales_data    
+    return sales_data
 
 
 def validate_data(values):
@@ -52,7 +54,7 @@ def validate_data(values):
     except ValueError as e:
         print(f"Invalid data: {e}, please try again.\n")
         return False
-            
+
     return True
 
 
@@ -73,9 +75,11 @@ def calculate_surplus_data(sales_row):
     Compare sales with stock and calculate the surplus for each item type.
 
     The surplus is defined as the sales figure subtracted from the stock:
-    - Positive surplus indicates carryover stock and possible excess on warehouse.
-    - Negative surplus indicates amount of items that required an extra order from 
-    manufacturer/main depot with extra cost, and requires data to be analysed for future, 
+    - Positive surplus indicates carryover stock and possible excess
+    on warehouse.
+    - Negative surplus indicates amount of items that required an extra order
+    from manufacturer/main depot with extra cost, and requires data to be
+    analysed for future,
     as well as to assist next stock calculation.
     """
     print("Calculating surplus data...\n")
@@ -92,24 +96,25 @@ def calculate_surplus_data(sales_row):
 
 def get_bimestrial_entries_sales():
     """
-    " Collects data from sales worksheet, collecting only bimestrial period last year, 
-    returning data as a list of lists to be used on stock data calculation".
+    " Collects data from sales worksheet, collecting only bimestrial period
+    last year, returning data as a list of lists to be used on stock data
+    calculation".
     """
     sales = SHEET.worksheet("sales")
-    
+
     columns = []
     for ind in range(1, 10):
         column = sales.col_values(ind)
         columns.append(column[-12:-10])
 
-    return columns    
+    return columns
 
 
 def calculate_stock_data(data):
     """
-    Calculate the average sold from two months(same month plus following month) 
+    Calculate the average sold from two months(same month plus following month)
     last year times 15% marketing target.
-    """  
+    """
     print("Calculating stock data...\n")
     new_stock_data = []
 
@@ -137,6 +142,7 @@ def main():
 
     return stock_data
 
+
 print("Welcome to Vasco Dublin Data Automation.\n")
 stock_data = main()
 
@@ -153,6 +159,7 @@ def get_stock_values(data):
         new_data[heading] = stock_num
 
     return new_data
+
 
 stock_values = get_stock_values(stock_data)
 print(stock_values)
