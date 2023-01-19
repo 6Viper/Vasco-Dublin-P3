@@ -18,16 +18,16 @@ Easy terminal use trough Heroku APP, at start you will have a welcoming message,
   - Instructions
   - Enter Data
 
-![Main display](assets/images/liveversionfront.jpg)
+![Main display](assets/images/mainpage.jpg)
 
 - __Input validation and error-check__
   - If data provided is invalid, message will return with error
   - System will inform issue, for example: Data with less or more then 9 digits
   - If data differs "Integers" invalid message will inform incorrect data
 
-![Incorrect data](assets/images/incorrectammountprovided.jpg)
+![Incorrect data](assets/images/shortvalue.jpg)
 
-![Incorrect data numbers](assets/images/incorrectdataprovidednumbersonly.jpg)
+![Incorrect data numbers](assets/images/invalidliteral.jpg)
 - __Update status__
   - Messages will inform each stage checked
   - Each step a calculation is made and update made to Google worksheet
