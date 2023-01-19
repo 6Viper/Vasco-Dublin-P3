@@ -75,8 +75,8 @@ def calculate_surplus_data(sales_row):
     The surplus is defined as the sales figure subtracted from the stock:
     - Positive surplus indicates carryover stock and possible excess on warehouse.
     - Negative surplus indicates amount of items that required an extra order from 
-    manufacturer with extra cost, and requires data to be analysed for future, as well
-    as to assist next stock calculation.
+    manufacturer/main depot with extra cost, and requires data to be analysed for future, 
+    as well as to assist next stock calculation.
     """
     print("Calculating surplus data...\n")
     stock = SHEET.worksheet("stock").get_all_values()
