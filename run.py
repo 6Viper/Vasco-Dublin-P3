@@ -138,5 +138,21 @@ def main():
     return stock_data
 
 print("Welcome to Vasco Dublin Data Automation.\n")
-main()
+stock_data = main()
 
+
+def get_stock_values(data):
+    """
+    Print out the calculated stock numbers for next month.
+    """
+    headings = SHEET.worksheet('stock').row_values(1)
+    print("Make a request to central depot for the next month:\n")
+
+    new_data = {}
+    for heading, stock_num in zip(headings, data):
+        new_data[heading] = stock_num
+
+    return new_data
+
+stock_values = get_stock_values(stock_data)
+print(stock_values)
