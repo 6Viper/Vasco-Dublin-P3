@@ -2,7 +2,7 @@
 Vasco Dublin Inventory App is a Python terminal tool created to assist with stock control and estimate the necessary stock amount for the following month.
 A feature much needed for the website created on Project 1 that will bring online shopping. 
 
-The main purpose of this inventory control is to reduce extra shipping costs and extra orders from manufacturer, to reduce warehouse physical space as well waste of products being sold underprice due to clearence or to go under "out of stock".
+The main purpose of this inventory control is to reduce extra shipping costs and extra orders from manufacturer, to reduce warehouse physical space as well waste of products being sold under price due to clearance or to go under "out of stock".
 
 [View the live project here](https://vasco-dublin.herokuapp.com/)
 
